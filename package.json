@@ -1,7 +1,7 @@
 {
   "name": "@runapi.ai/qwen-2-mcp",
-  "version": "0.1.0",
-  "description": "RunAPI MCP server for one model line: create tasks, poll status, and check pricing with one API key.",
+  "version": "0.1.1",
+  "description": "Qwen 2 MCP server for RunAPI — create Qwen 2 AI tasks (edit image, remix image, text to image), poll status, and check pricing across 3 models with one API key.",
   "type": "module",
   "main": "dist/src/index.js",
   "bin": {
@@ -27,7 +27,16 @@
     "runapi",
     "mcp",
     "model-context-protocol",
-    "ai"
+    "ai",
+    "qwen-2",
+    "qwen-2-mcp",
+    "qwen-2-ai",
+    "qwen-2-api",
+    "image-generation",
+    "ai-image",
+    "edit-image",
+    "remix-image",
+    "text-to-image"
   ],
   "author": "RunAPI",
   "license": "Apache-2.0",
