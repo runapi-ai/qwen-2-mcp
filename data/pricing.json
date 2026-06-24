@@ -1,0 +1,13 @@
+{
+  "endpoints": {
+    "qwen-2-edit-image/edit_image": {
+      "unit_price_cents": 6
+    },
+    "qwen-2-remix-image/remix_image": {
+      "unit_price_cents": 4
+    },
+    "qwen-2-text-to-image/text_to_image": {
+      "unit_price_cents": 6
+    }
+  }
+}

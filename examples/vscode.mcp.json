@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "qwen-2": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@runapi.ai/qwen-2-mcp"
+      ],
+      "env": {
+        "RUNAPI_API_KEY": "${RUNAPI_API_KEY}"
+      }
+    }
+  }
+}

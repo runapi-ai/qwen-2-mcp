@@ -1,0 +1,103 @@
+{
+  "catalog_models": [
+    "qwen-2-edit-image",
+    "qwen-2-remix-image",
+    "qwen-2-text-to-image"
+  ],
+  "actions": {
+    "qwen-2/edit-image": {
+      "model": "Qwen 2",
+      "endpoint": "edit_image",
+      "models": [
+        "qwen-2-edit-image"
+      ],
+      "fields_by_model": {
+        "qwen-2-edit-image": {
+          "prompt": {
+            "required": true
+          },
+          "aspect_ratio": {
+            "enum": [
+              "1:1",
+              "2:3",
+              "3:2",
+              "3:4",
+              "4:3",
+              "9:16",
+              "16:9",
+              "21:9"
+            ]
+          },
+          "output_format": {
+            "enum": [
+              "jpeg",
+              "png"
+            ]
+          },
+          "source_image_url": {
+            "required": true
+          }
+        }
+      }
+    },
+    "qwen-2/remix-image": {
+      "model": "Qwen 2",
+      "endpoint": "remix_image",
+      "models": [
+        "qwen-2-remix-image"
+      ],
+      "fields_by_model": {
+        "qwen-2-remix-image": {
+          "prompt": {
+            "required": true
+          },
+          "acceleration": {
+            "enum": [
+              "none",
+              "regular",
+              "high"
+            ]
+          },
+          "output_format": {
+            "enum": [
+              "png",
+              "jpeg"
+            ]
+          },
+          "source_image_url": {
+            "required": true
+          }
+        }
+      }
+    },
+    "qwen-2/text-to-image": {
+      "model": "Qwen 2",
+      "endpoint": "text_to_image",
+      "models": [
+        "qwen-2-text-to-image"
+      ],
+      "fields_by_model": {
+        "qwen-2-text-to-image": {
+          "prompt": {
+            "required": true
+          },
+          "aspect_ratio": {
+            "enum": [
+              "1:1",
+              "3:4",
+              "4:3",
+              "9:16",
+              "16:9"
+            ]
+          },
+          "output_format": {
+            "enum": [
+              "png",
+              "jpeg"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
