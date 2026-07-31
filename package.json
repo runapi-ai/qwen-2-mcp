@@ -1,7 +1,7 @@
 {
   "name": "@runapi.ai/qwen-2-mcp",
-  "version": "0.1.6",
-  "description": "RunAPI Qwen 2 MCP server for image generation: create tasks, poll results, and check pricing across 3 model variants from Claude Code, Codex, Cursor, and VS Code.",
+  "version": "0.1.7",
+  "description": "RunAPI Qwen 2 MCP server for image generation: create tasks, poll results, and check pricing across 2 model variants from Claude Code, Codex, Cursor, and VS Code.",
   "type": "module",
   "main": "dist/src/index.js",
   "bin": {
@@ -10,7 +10,6 @@
   "files": [
     "dist",
     "data/contract.json",
-    "data/pricing.json",
     "examples",
     "server.json",
     "README.md",
@@ -39,7 +38,6 @@
     "image-generation",
     "ai-image",
     "edit-image",
-    "remix-image",
     "text-to-image"
   ],
   "author": "RunAPI",
@@ -57,7 +55,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
-    "@runapi.ai/mcp-core": "0.1.5",
+    "@runapi.ai/mcp-core": "0.2.3",
     "zod": "^3.25.76"
   },
   "devDependencies": {

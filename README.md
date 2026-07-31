@@ -1,7 +1,7 @@
 <h1 align="center">RunAPI Qwen 2 MCP Server</h1>
 
 <p align="center">
-  <strong>Qwen 2 API access for AI agents: create image generation tasks, poll results, and check pricing through one focused MCP server.</strong>
+  <strong>Qwen 2 API access for AI agents: run image generation operations, poll asynchronous results, and check pricing through one focused MCP server.</strong>
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
   <a href="https://github.com/runapi-ai/qwen-2-mcp"><img src="https://img.shields.io/badge/GitHub-runapi--ai%2Fqwen--2--mcp-24292f?style=flat-square" alt="GitHub repository"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue?style=flat-square" alt="Apache-2.0 license"></a>
   <img src="https://img.shields.io/badge/Type-MCP_Server-blue?style=flat-square" alt="MCP Server">
-  <img src="https://img.shields.io/badge/Models-3-16a34a?style=flat-square" alt="3 models">
+  <img src="https://img.shields.io/badge/Models-2-16a34a?style=flat-square" alt="2 models">
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@
 ## Why This Package?
 
 `@runapi.ai/qwen-2-mcp` is a focused Model Context Protocol server for the **Qwen 2** model line on RunAPI.
-It gives MCP-compatible assistants direct access to 3 endpoints and 3 model variants without loading the full RunAPI catalog.
+It gives MCP-compatible assistants direct access to 2 endpoints and 2 model variants without loading the full RunAPI catalog.
 
 Use this per-model server when an agent should stay scoped to Qwen 2. Use [`@runapi.ai/mcp`](https://github.com/runapi-ai/mcp) when one assistant should discover every RunAPI model line.
 
@@ -74,22 +74,20 @@ Ready-made examples are in [`examples/`](examples/) for Claude, Cursor, Windsurf
 
 | Tool | Auth | Purpose |
 |---|---|---|
-| `edit_image` | Yes | Create a Qwen 2 edit image task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
-| `remix_image` | Yes | Create a Qwen 2 remix image task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
-| `text_to_image` | Yes | Create a Qwen 2 text to image task and optionally wait for a terminal status. Returns the task id, status, output URLs, and pricing snapshot. |
+| `edit_image` | Yes | Create a Qwen 2 edit image task and optionally wait for a terminal status. Returns the task id, status, and output URLs. |
+| `text_to_image` | Yes | Create a Qwen 2 text to image task and optionally wait for a terminal status. Returns the task id, status, and output URLs. |
 | `get_task` | Yes | Fetch the current status and latest payload for an existing task. |
-| `check_pricing` | No | Look up the current pricing snapshot for a Qwen 2 model and endpoint. |
+| `check_pricing` | No | Look up current pricing for a Qwen 2 model and endpoint. |
 
 ---
 
 ## Models
 
-Qwen 2 covers 3 model variants across 3 endpoints. Each tool accepts the models listed for it:
+Qwen 2 covers 2 model variants across 2 endpoints. Each tool accepts the models listed for it:
 
 | Tool | Models |
 |---|---|
 | `edit_image` | `qwen-2-edit-image` |
-| `remix_image` | `qwen-2-remix-image` |
 | `text_to_image` | `qwen-2-text-to-image` |
 
 Model availability can change between releases. Use `check_pricing` or the [Qwen 2 model page](https://runapi.ai/models/qwen-2) for the current catalog view.
